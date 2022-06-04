@@ -12,10 +12,20 @@ class Calculator4 {
     }
 }
 
+class SubstractionableCalculator extends Calculator4 {
+    public SubstractionableCalculator(int left, int right) {
+        super(left, right);
+    }
+    public void substract() {
+        System.out.println(this.left - this.right);
+    }
+}
+
 public class CalculatorDemo4 {
     public static void main(String[] args) {
-        Calculator4 c1 = new Calculator4(10, 20);
+        SubstractionableCalculator c1 = new SubstractionableCalculator(10, 20);
         c1.sum();
         c1.avg();
+        c1.substract();
     }
 }
